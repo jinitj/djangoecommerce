@@ -14,7 +14,7 @@ class Customer(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length =350)
-    photo = models.ImageField()
+    photo = models.ImageField(blank=True)
     description = models.TextField()
 
     def __str__(self):
