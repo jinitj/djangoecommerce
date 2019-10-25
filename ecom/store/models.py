@@ -21,8 +21,9 @@ class Product(models.Model):
         return self.name
 
 class Cart(models.Model):
+    cart_id = models.CharField(max_length=265, primary_key=True)
     cart_identifier = models.ForeignKey(Customer,on_delete = models.CASCADE)
-    cart_id = models.CharField(max_length=265)
+    
     total = models.IntegerField()
     def __str__(self):
         return self.cart_id
